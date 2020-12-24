@@ -18,19 +18,19 @@ Implementation of  Calculator using Postfix SDT (given below) along with LR pars
 
 
 
-##  > <b> Grammar </b>
-
-1. L ⇒ E n 				      {print(E.val); }
-2. E ⇒ E1+T 				   {E.val = E1.val+T.val; }
-3. E ⇒ T 					   {E.val = T.val; }
-4. T ⇒ T1\*F 				   {T.val = T1.val*F.val; }
-5. T ⇒ F 						{T.val = F.val; }
-6. F ⇒ F1^A 				   {F.val = F1.val^A.val; }
-7. F ⇒ A 						{F.val = A.val; }
-8. A ⇒ -A1 				      {A.val = -A1.val; }
-9. A ⇒ (E) 					   {A.val = E.val; }
-10. A ⇒ num 				   {A.val = num.lexval; }
-
+## <b> Grammar </b>
+<pre>
+1. L ⇒ E n        {print(E.val); }
+2. E ⇒ E1+T       {E.val = E1.val+T.val; }
+3. E ⇒ T          {E.val = T.val; }
+4. T ⇒ T1\*F      {T.val = T1.val*F.val; }
+5. T ⇒ F          {T.val = F.val; }
+6. F ⇒ F1^A       {F.val = F1.val^A.val; }
+7. F ⇒ A          {F.val = A.val; }
+8. A ⇒ -A1        {A.val = -A1.val; }
+9. A ⇒ (E)        {A.val = E.val; }
+10. A ⇒ num       {A.val = num.lexval; }
+</pre>
 
 
 ---
@@ -59,5 +59,5 @@ python .\parser.py
 
 ## Output
 
-![](Output(Example 2).PNG)
+![](o2.PNG)
 
