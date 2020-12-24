@@ -1,0 +1,126 @@
+python .\parser.py
+Enter String: 2*4+(-3)
+
+Stack:  [0]
+Symbols Stack:  [('$', None)]
+Shift State  7
+
+Stack:  [0, 7]
+Symbols Stack:  [('$', None), ('num', 2)]
+Reduce Using Production Number:  9
+Next State 4
+
+Stack:  [0, 4]
+Symbols Stack:  [('$', None), ('A', 2)]
+Reduce Using Production Number:  6
+Next State 3
+
+Stack:  [0, 3]
+Symbols Stack:  [('$', None), ('F', 2)]
+Reduce Using Production Number:  4
+Next State 2
+
+Stack:  [0, 2]
+Symbols Stack:  [('$', None), ('T', 2)]
+Shift State  9
+
+Stack:  [0, 2, 9]
+Symbols Stack:  [('$', None), ('T', 2), ('*', None)]
+Shift State  7
+
+Stack:  [0, 2, 9, 7]
+Symbols Stack:  [('$', None), ('T', 2), ('*', None), ('num', 4)]
+Reduce Using Production Number:  9
+Next State 4
+
+Stack:  [0, 2, 9, 4]
+Symbols Stack:  [('$', None), ('T', 2), ('*', None), ('A', 4)]
+Reduce Using Production Number:  6
+Next State 20
+
+Stack:  [0, 2, 9, 20]
+Symbols Stack:  [('$', None), ('T', 2), ('*', None), ('F', 4)]
+Reduce Using Production Number:  3
+
+SDT CALCULATION:  2  *  4  =  8
+
+Next State 2
+
+Stack:  [0, 2]
+Symbols Stack:  [('$', None), ('T', 8)]
+Reduce Using Production Number:  2
+Next State 1
+
+Stack:  [0, 1]
+Symbols Stack:  [('$', None), ('E', 8)]
+Shift State  8
+
+Stack:  [0, 1, 8]
+Symbols Stack:  [('$', None), ('E', 8), ('+', None)]
+Shift State  6
+
+Stack:  [0, 1, 8, 6]
+Symbols Stack:  [('$', None), ('E', 8), ('+', None), ('(', None)]
+Shift State  16
+
+Stack:  [0, 1, 8, 6, 16]
+Symbols Stack:  [('$', None), ('E', 8), ('+', None), ('(', None), ('-', None)]
+Shift State  18
+
+Stack:  [0, 1, 8, 6, 16, 18]
+Symbols Stack:  [('$', None), ('E', 8), ('+', None), ('(', None), ('-', None), ('num', 3)]
+Reduce Using Production Number:  9
+Next State 26
+
+Stack:  [0, 1, 8, 6, 16, 26]
+Symbols Stack:  [('$', None), ('E', 8), ('+', None), ('(', None), ('-', None), ('A', 3)]
+Reduce Using Production Number:  7
+Next State 15
+
+Stack:  [0, 1, 8, 6, 15]
+Symbols Stack:  [('$', None), ('E', 8), ('+', None), ('(', None), ('A', -3)]
+Reduce Using Production Number:  6
+Next State 14
+
+Stack:  [0, 1, 8, 6, 14]
+Symbols Stack:  [('$', None), ('E', 8), ('+', None), ('(', None), ('F', -3)]
+Reduce Using Production Number:  4
+Next State 13
+
+Stack:  [0, 1, 8, 6, 13]
+Symbols Stack:  [('$', None), ('E', 8), ('+', None), ('(', None), ('T', -3)]
+Reduce Using Production Number:  2
+Next State 12
+
+Stack:  [0, 1, 8, 6, 12]
+Symbols Stack:  [('$', None), ('E', 8), ('+', None), ('(', None), ('E', -3)]
+Shift State  22
+
+Stack:  [0, 1, 8, 6, 12, 22]
+Symbols Stack:  [('$', None), ('E', 8), ('+', None), ('(', None), ('E', -3), (')', None)]
+Reduce Using Production Number:  8
+Next State 4
+
+Stack:  [0, 1, 8, 4]
+Symbols Stack:  [('$', None), ('E', 8), ('+', None), ('A', -3)]
+Reduce Using Production Number:  6
+Next State 3
+
+Stack:  [0, 1, 8, 3]
+Symbols Stack:  [('$', None), ('E', 8), ('+', None), ('F', -3)]
+Reduce Using Production Number:  4
+Next State 19
+
+Stack:  [0, 1, 8, 19]
+Symbols Stack:  [('$', None), ('E', 8), ('+', None), ('T', -3)]
+Reduce Using Production Number:  1
+
+SDT CALCULATION:  8  +  -3  =  5
+
+Next State 1
+
+Stack:  [0, 1]
+Symbols Stack:  [('$', None), ('E', 5)]
+Accept
+
+Output: 5
